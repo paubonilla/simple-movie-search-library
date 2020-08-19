@@ -1,0 +1,35 @@
+const [username, setUsername] = useState<string>('')
+const [userFocus, setUserFocus] = useState<string>('')
+
+const _setUsername = (e: any) => {
+  setUsername(e.target.value)
+}
+
+const clean = () => {
+  setUserFocus()
+  setUsername('')
+}
+
+return (
+  <div>
+    <h1>{userFocus}</h1>
+    <input 
+      value={username}
+      text="type"
+      onChange={_setUsername}
+    />
+    <button onClick={clean}>Set</button>
+  </div>
+)
+
+function checkPlatform() {
+  //return a string that is either 'win' or 'mac'
+  //if u have mac, return the string 'mac'
+  //window.navigator.platform
+  // const _platform = window.navigator.platform === 'win' ? `${"Win: " + navigator.platform}` : `${"Mac: " + navigator.platform}`;
+  // document.getElementById("root").innerHTML = _platform;
+  return window.navigator.platform.toLowerCase().includes("mac") ? 'mac' : 'win'
+}
+module.exports = {
+  checkPlatform,
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Avengers: Endgame",
+    "poster": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05.jpg",
+    "type": "movie",
+    "year": "2019",
+    "genre": "action/sci-fi",
+    "about": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+  },
+  {
+    "title": "The Avengers",
+    "description": [
+      {
+        "poster": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/theavengers_lob_crd_03.jpg",
+        "year": "2012",
+        "genre": "action/sci-fi"
+      }
+    ]
+  }
+]
