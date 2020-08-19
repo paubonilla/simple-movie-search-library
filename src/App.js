@@ -7,19 +7,23 @@ import styled from 'styled-components'
 export const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
+  background: #41444B;
   display: flex;
-  justify-content: center;
   align-items: flex-start;
-  background-color: #fff;
+  justify-content: center;
 `
 
 export const Appinner = styled.div`
-  width: 100%;
-  max-width: 400px;
   margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  h1 {
+    margin-top: 40px;
+  }
 `
 
 export const Content = styled.div`
@@ -28,14 +32,14 @@ export const Content = styled.div`
 
 export const SearchBar = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   > input {
+    width: 270px;
     margin: 2rem;
-    background: #fff;
-    color: #333;
-    outline: none;
+    background: #F6F4E6;
+    color: #51575D;
   }
 `
 
@@ -45,8 +49,8 @@ export const ResultsList = styled.ul`
     border-radius: 10px;
     margin: 10px 0;
     padding: 20px;
-    background: grey;
-    color: #eee;
+    background: #CBEAED;
+    color: #41444B;
   }
 `
 
@@ -66,7 +70,7 @@ export const apiFetchResults = (search) => {
 }
 
 function App() {
-  const [movieIndex, setMovieIndex] = useState(0)
+  // const [movieIndex, setMovieIndex] = useState(0)
   const [search, setSearch] = useState("")
   const [searchResults, setSearchResults] = useState([])
 
@@ -85,10 +89,11 @@ function App() {
   return (
     <AppContainer>
       <Appinner>
+        <h1>Your Movie Library</h1>
         <SearchBar>
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search a movie title, actor, etc..."
             value={search}
             onChange={handleChange}
           />
